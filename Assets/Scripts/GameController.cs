@@ -26,9 +26,9 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 
 		for (int i = 0; i < 100; i++) {
-			spawnPosition = SpawnRange(spawnPosition,spawnRange);
+			Vector3 location = SpawnRange(spawnPosition,spawnRange);
 			Quaternion spawnRotation = Quaternion.identity;
-			GameObject spawnedClone = Instantiate<GameObject>(spawnedObject, spawnPosition, spawnRotation);
+			GameObject spawnedClone = Instantiate<GameObject>(spawnedObject, location, spawnRotation);
 			spawnedClone.GetComponent<Rigidbody>().AddForce(SpawnRange(initialForce,initialForceVariance));
 
 			Debug.Log("Spawn Object" + spawnedObject);
