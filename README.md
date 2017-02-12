@@ -1,6 +1,6 @@
 # s2017-PearlHacks
 
-A simple bubble popping game made in Unity with a dual purpose: to provide a calming experience for gamers on the autism spectrum, to learn to make simple games with Unity and get an introduction to game development.
+A simple bubble popping game made in Unity with a dual purpose: to provide a calming experience for gamers on the autism spectrum and a chance to learn to make simple games with Unity and get an introduction to game development.
 
 ## Roadmap
 
@@ -14,7 +14,7 @@ We hope to distrubute our game on Android and iOS, with working table tand web v
 
 ### Experience
 
-Ideally, playing our game should be a calming, repetative experience, perhaps in the vein of some "not-games" like _Venture Capitalist_, except it requires continued attention from the player.
+Ideally, playing our game should be a calming, repetative experience, perhaps in the vein of some "not-games" like _Venture Capitalist_, but without leveling mechanics that may cause stress.
 
 ### Juice
 
