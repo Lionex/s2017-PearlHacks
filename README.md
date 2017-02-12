@@ -21,11 +21,14 @@ Ideally, playing our game should be a calming, repetative experience, perhaps in
 After implementing the minimum viable product we hope to complete some feature passes to add polish to the experience.
 
 - [ ] Sound
+- [ ] Sound settings and controller
 - [ ] Bubble Material
 - [ ] Bubble animation
 - [ ] Particle Effects (on bubble pop)
+- [ ] Bubbles pop upon exiting the play are
 - [ ] Game Menus
 - [ ] Bubble color customization
-- [ ] Sound settings
 - [ ] Accessibility settings.
+- [ ] Bubble count and size
+- [ ] Bubble speed
 
