@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject bubble;	
-	public Vector3 spawnValues;
-	public float spawnJitter;
+	public GameObject spawnedObject;
+
+	public Vector3 spawnValues;  // The position of the spawner
+	public float spawnXRange;    // The range of values X that objects can spawn in
+
 	public float spawnWait;
 	public float startWait;
 	public float timeVariance;
@@ -26,11 +28,11 @@ public class GameController : MonoBehaviour {
 	IEnumerator SpawnWaves () {
 		yield return new WaitForSeconds (startWait);
 		while (true) {
-			Vector3 spawnPosition = new Vector3 (spawnValues.x + Random.Range(-spawnJitter,spawnJitter),spawnValues.y,spawnValues.z);
+			Vector3 spawnPosition = new Vector3 (spawnValues.x + Random.Range(-spawnXRange,spawnXRange),spawnValues.y,spawnValues.z);
 			Quaternion spawnRotation = Quaternion.identity;
-			Debug.Log("Create bubble.");
-			Instantiate(bubble, spawnPosition, spawnRotation);
-			yield return new WaitForSeconds (spawnWait + Random.Range(-spawnJitter, spawnJitter));
+			Debug.Log("Spawn Object" + spawnedObject);
+			Instantiate(spawnedObject, spawnPosition, spawnRotation);
+			yield return new WaitForSeconds (Random.Range(timeVariance , spawnWait));
 		}
 	}
 }
