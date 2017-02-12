@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 
 		for (int i = 0; i < 100; i++) {
+
 			Vector3 location = SpawnRange(spawnPosition,spawnRange);
 			Quaternion spawnRotation = Quaternion.identity;
 			GameObject spawnedClone = Instantiate<GameObject>(spawnedObject, location, spawnRotation);
