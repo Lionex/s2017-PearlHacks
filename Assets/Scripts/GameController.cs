@@ -6,8 +6,11 @@ public class GameController : MonoBehaviour {
 
 	public GameObject spawnedObject;
 
-	public Vector3 spawnValues;  // The position of the spawner
-	public float spawnXRange;    // The range of values X that objects can spawn in
+	public Vector3 initialForce;
+	public Vector3 initialForceVariance;
+
+	public Vector3 spawnPosition;  // The position of the spawner
+	public Vector3 spawnRange;    // The range of values X that objects can spawn in
 
 	public float spawnWait;
 	public float startWait;
@@ -23,11 +26,22 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 
 		for (int i = 0; i < 100; i++) {
-			Vector3 spawnPosition = new Vector3 (spawnValues.x + Random.Range(-spawnXRange,spawnXRange),spawnValues.y,spawnValues.z);
+			spawnPosition = SpawnRange(spawnPosition,spawnRange);
 			Quaternion spawnRotation = Quaternion.identity;
+			GameObject spawnedClone = Instantiate<GameObject>(spawnedObject, spawnPosition, spawnRotation);
+			spawnedClone.GetComponent<Rigidbody>().AddForce(SpawnRange(initialForce,initialForceVariance));
+
 			Debug.Log("Spawn Object" + spawnedObject);
-			Instantiate(spawnedObject, spawnPosition, spawnRotation);
-			yield return new WaitForSeconds (Random.Range(timeVariance , spawnWait));
+
+			yield return new WaitForSeconds (Random.Range(spawnWait - timeVariance , spawnWait));
 		}
+	}
+
+	private Vector3 SpawnRange (Vector3 Base, Vector3 Variance) {
+		return new Vector3
+			( Base.x + Random.Range(-Variance.x, Variance.x)
+			, Base.y + Random.Range(-Variance.y, Variance.y)
+			, Base.z + Random.Range(-Variance.z, Variance.z)
+			);
 	}
 }
