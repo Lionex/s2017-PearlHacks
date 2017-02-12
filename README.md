@@ -6,7 +6,7 @@ A simple bubble popping game made in Unity with a dual purpose: to provide a cal
 
 ### Scope & Platform
 
-We hope to distrubute our game on Android and iOS, with working table tand web versions if time allows.  **Minimum viable product**: a simple tapping mechanic that destroyes objects. To support such functionaly we implement the following basic parts:
+We hope to distrubute our game on Android and iOS, with working table and web versions if time allows.  **Minimum viable product**: a simple tapping mechanic that destroys objects. To support such functionaly we implement the following basic parts:
 
 1. A reusable bubble component.
 2. A bubble spawner.
@@ -14,7 +14,7 @@ We hope to distrubute our game on Android and iOS, with working table tand web v
 
 ### Experience
 
-Ideally, playing our game should be a calming, repetative experience, perhaps in the vein of some "not-games" like _Venture Capitalist_, but without leveling mechanics that may cause stress.
+Ideally, playing our game should be a calming, repetitive experience, perhaps in the vein of some "not-games" like _Venture Capitalist_, but without leveling mechanics that may cause stress.
 
 ### Juice
 
@@ -22,11 +22,11 @@ After implementing the minimum viable product we hope to complete some feature p
 
 - [ ] Sound
 - [ ] Sound settings and controller
-- [ ] Bubble Material
+- [ ] Bubble material
 - [ ] Bubble animation
-- [ ] Particle Effects (on bubble pop)
+- [ ] Particle effects (on bubble pop)
 - [ ] Bubbles pop upon exiting the play are
-- [ ] Game Menus
+- [ ] Game menus
 - [ ] Bubble color customization
 - [ ] Accessibility settings.
 - [ ] Bubble count and size
